@@ -3,6 +3,12 @@
  * version: 1.0.0
  */
 
+@use 'sass:color';
+
+$facebook-blue: rgb(24,119,242);
+$twitter-blue: #1DA1F2;
+$email-gray: #999;
+
 .share-wrapper {
 
 	@media (min-width: 768px) {
@@ -18,8 +24,9 @@
 			display: flex;
 			justify-content: center;
 			padding: 10px 15px;
-			background: #999;
+			background: $email-gray;
 			border-radius: 10px;
+			transition: background .5s ease;
 
 			svg {
 				fill: #fff;
@@ -33,18 +40,26 @@
 				margin-right: 10px;
 				color: #fff;
 			}
+
+			.icon.icon-only {
+				margin-right: 0;
+			}
 		}
 	}
 
 	.share-facebook {
 
 		a {
-			background: rgb(24, 119, 242);
+			background: $facebook-blue;
 			margin-bottom: 10px;
 			
 			@media (min-width: 768px) {
 				margin-bottom: 0;
 				margin-right: 5px;
+			}
+
+			&:hover {
+				background: color.scale($facebook-blue, $lightness: -20%);
 			}
 		}
 	}
@@ -52,19 +67,31 @@
 	.share-twitter {
 		
 		a {
-			background: #1DA1F2;
+			background: $twitter-blue;
 			margin-bottom: 10px;
 
 			@media (min-width: 768px) {
 				margin-bottom: 0;
 				margin-right: 5px;
 			}
+
+			&:hover {
+				background: color.scale($twitter-blue, $lightness: -20%);
+			}
 		}
 	}
 
 	.share-email {
-		.icon {
-			font-size: 20px;
+
+		a {
+
+			.icon {
+				font-size: 20px;
+			}
+
+			&:hover {
+				background: color.scale($email-gray, $lightness: -20%);
+			}
 		}
 	}
 }

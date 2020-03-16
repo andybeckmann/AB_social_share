@@ -32,6 +32,7 @@ img {
   padding: 10px 15px;
   background: #999;
   border-radius: 10px;
+  transition: background 0.5s ease;
 }
 .share-wrapper .share-facebook a svg, .share-wrapper .share-twitter a svg, .share-wrapper .share-email a svg {
   fill: #fff;
@@ -44,6 +45,9 @@ img {
   margin-right: 10px;
   color: #fff;
 }
+.share-wrapper .share-facebook a .icon.icon-only, .share-wrapper .share-twitter a .icon.icon-only, .share-wrapper .share-email a .icon.icon-only {
+  margin-right: 0;
+}
 .share-wrapper .share-facebook a {
   background: #1877f2;
   margin-bottom: 10px;
@@ -53,6 +57,9 @@ img {
     margin-bottom: 0;
     margin-right: 5px;
   }
+}
+.share-wrapper .share-facebook a:hover {
+  background: #0b5ec9;
 }
 .share-wrapper .share-twitter a {
   background: #1DA1F2;
@@ -64,6 +71,12 @@ img {
     margin-right: 5px;
   }
 }
-.share-wrapper .share-email .icon {
+.share-wrapper .share-twitter a:hover {
+  background: #0c84cd;
+}
+.share-wrapper .share-email a .icon {
   font-size: 20px;
+}
+.share-wrapper .share-email a:hover {
+  background: #7a7a7a;
 }
