@@ -31,48 +31,10 @@ module.exports = function(grunt) {
                 }
             }
         },
-        
-        // -- Javscript Hints
-
-        jshint: {
-            options: {
-                eqnull: true,
-                eqeqeq: false,
-            },
-            beforeconcat: ['js/AB_scroll_navigation.js']
-        },
-
-        // -- Javascript Concatenation
-
-        concat: {   
-            dist: {
-                src: [
-                    'js/AB_scroll_navigation.js'
-                ],
-                dest: 'js/build/global.js',
-            }
-        },
-
-        // -- Javascript Minification
-
-        uglify: {
-            build: {
-                src: 'js/build/global.js',
-                dest: 'js/build/global.min.js'
-            }
-        },
 
         // -- Watch
 
         watch: {
- 
-            scripts: {
-                files: ['js/*.js'],
-                tasks: ['jshint:beforeconcat','concat','uglify'],
-                options: {
-                    spawn: false,
-                }
-            },
  
             css: {
                 files: ['scss/*.scss','scss/**/*.scss','css/**/*.css'],
@@ -89,5 +51,5 @@ module.exports = function(grunt) {
 
     require('load-grunt-tasks')(grunt);
  
-    grunt.registerTask('default', ['jshint:beforeconcat','concat', 'uglify', 'dart-sass', 'cssmin', 'watch']);
+    grunt.registerTask('default', ['dart-sass', 'cssmin', 'watch']);
 };
