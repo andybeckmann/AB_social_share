@@ -21,9 +21,13 @@ img {
 @media (min-width: 768px) {
   .share-wrapper {
     display: flex;
+    flex-flow: wrap;
   }
 }
-.share-wrapper .share-facebook a, .share-wrapper .share-twitter a, .share-wrapper .share-email a {
+.share-wrapper .share-facebook, .share-wrapper .share-twitter, .share-wrapper .share-pinterest, .share-wrapper .share-email {
+  margin-bottom: 10px;
+}
+.share-wrapper .share-facebook a, .share-wrapper .share-twitter a, .share-wrapper .share-pinterest a, .share-wrapper .share-email a {
   text-decoration: none;
   color: #fff;
   font-weight: bold;
@@ -34,10 +38,10 @@ img {
   border-radius: 10px;
   transition: background 0.5s ease;
 }
-.share-wrapper .share-facebook a svg, .share-wrapper .share-twitter a svg, .share-wrapper .share-email a svg {
+.share-wrapper .share-facebook a svg, .share-wrapper .share-twitter a svg, .share-wrapper .share-pinterest a svg, .share-wrapper .share-email a svg {
   fill: #fff;
 }
-.share-wrapper .share-facebook a .icon, .share-wrapper .share-twitter a .icon, .share-wrapper .share-email a .icon {
+.share-wrapper .share-facebook a .icon, .share-wrapper .share-twitter a .icon, .share-wrapper .share-pinterest a .icon, .share-wrapper .share-email a .icon {
   display: block;
   max-width: 20px;
   max-height: 20px;
@@ -45,7 +49,7 @@ img {
   margin-right: 10px;
   color: #fff;
 }
-.share-wrapper .share-facebook a .icon.icon-only, .share-wrapper .share-twitter a .icon.icon-only, .share-wrapper .share-email a .icon.icon-only {
+.share-wrapper .share-facebook a .icon.icon-only, .share-wrapper .share-twitter a .icon.icon-only, .share-wrapper .share-pinterest a .icon.icon-only, .share-wrapper .share-email a .icon.icon-only {
   margin-right: 0;
 }
 .share-wrapper .share-facebook a {
@@ -73,6 +77,23 @@ img {
 }
 .share-wrapper .share-twitter a:hover {
   background: #0c84cd;
+}
+.share-wrapper .share-pinterest a {
+  background: #e60023;
+  margin-bottom: 10px;
+}
+@media (min-width: 768px) {
+  .share-wrapper .share-pinterest a {
+    margin-bottom: 0;
+    margin-right: 5px;
+  }
+}
+.share-wrapper .share-pinterest a:hover {
+  background: #b8001c;
+}
+.share-wrapper .share-pinterest a svg {
+  width: 20px;
+  height: 20px;
 }
 .share-wrapper .share-email a .icon {
   font-size: 20px;

@@ -6,16 +6,20 @@
 @use 'sass:color';
 
 $facebook-blue: rgb(24,119,242);
-$twitter-blue: #1DA1F2;
-$email-gray: #999;
+$twitter-blue: 	#1DA1F2;
+$pinterest-red: #e60023;
+$email-gray: 	#999;
 
 .share-wrapper {
 
 	@media (min-width: 768px) {
 		display: flex;
+		flex-flow: wrap;
 	}
 
-	.share-facebook, .share-twitter, .share-email {
+	.share-facebook, .share-twitter, .share-pinterest, .share-email {
+
+		margin-bottom: 10px;
 
 		a {
 			text-decoration: none;
@@ -77,6 +81,27 @@ $email-gray: #999;
 
 			&:hover {
 				background: color.scale($twitter-blue, $lightness: -20%);
+			}
+		}
+	}
+
+	.share-pinterest {
+		a {
+			background: $pinterest-red;
+			margin-bottom: 10px;
+
+			@media (min-width: 768px) {
+				margin-bottom: 0;
+				margin-right: 5px;
+			}
+
+			&:hover {
+				background: color.scale($pinterest-red, $lightness: -20%);
+			}
+
+			svg {
+				width: 20px;
+				height: 20px;
 			}
 		}
 	}
