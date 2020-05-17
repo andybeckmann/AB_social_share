@@ -35,7 +35,7 @@ img {
   justify-content: center;
   padding: 10px 15px;
   background: #999;
-  border-radius: 10px;
+  border-radius: 3px;
   transition: background 0.5s ease;
 }
 .share-wrapper .share-facebook a svg, .share-wrapper .share-twitter a svg, .share-wrapper .share-pinterest a svg, .share-wrapper .share-email a svg {
